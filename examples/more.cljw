@@ -1,2 +1,13 @@
-defn abc [x]
+def hello "hello world"
+
+
+
+defn abc
+    "这里是程序说明"
+    [x]
+    println x
+
+defn abc2
+    "这里是程序说明"
+    [x]
     println x
