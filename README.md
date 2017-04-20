@@ -7,7 +7,9 @@ Clojure Wisp 是一个小工具，可以方便编写clojure程序，减少括号
 
 适用于Clojure和ClojureScript程序。
 
-这个程序改编自guile中的wisp，原网址为： <http://www.draketo.de/english/wisp> ，针对clojure程序进行了加强和改进。
+当前版本： 0.9，目前只在Linux系统中测试通过。
+
+这个程序改编自 Guile 中的 Wisp，原网址为： <http://www.draketo.de/english/wisp> ，针对clojure程序进行了加强和改进。
 
 通过这个小工具，可以实现通过空格缩进来展示Clojure程序结构，这和Python程序类似。这样就可以大量减少括号的输入。
 
@@ -27,7 +29,7 @@ defn abc [x]
 
 # 安装和使用方法<a id="sec-1"></a>
 
-首先安装最新的2.2版本的guile，更多可参考： <https://www.gnu.org/software/guile>
+首先安装最新的2.2版本的Guile，更多可参考： <https://www.gnu.org/software/guile>
 
 然后：
 
@@ -43,10 +45,12 @@ cd clj-wisp
 guile clj-wisp.scm examples/abc.cljw > abc.clj
 ```
 
-为了方便调用，根据需要可修改 `cwisp.sh` ，运行 ：
+注意其中使用了 `>`
+
+为了方便调用，根据需要可修改shell程序 `cwisp.sh` ，例如运行 ：
 
 ```sh
-./cwisp.sh examples/abc.cljw > abc.clj
+./cwisp.sh examples/abc.cljw abc.clj
 ```
 
 # 基本语法<a id="sec-2"></a>
