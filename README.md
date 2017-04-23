@@ -1,8 +1,11 @@
-- [文件名称](#sec-1)
+- [简介](#sec-1)
 - [安装和使用方法](#sec-2)
-- [基本语法](#sec-3)
-- [Emacs 用户](#sec-4)
-- [更多技巧](#sec-5)
+- [文件名称](#sec-3)
+- [基本语法](#sec-4)
+- [Emacs 用户](#sec-5)
+- [更多技巧](#sec-6)
+
+# 简介<a id="sec-1"></a>
 
 Clojure Wisp 是一个小工具，可以方便编写clojure程序，减少括号的输入。
 
@@ -14,33 +17,25 @@ Clojure Wisp 是一个小工具，可以方便编写clojure程序，减少括号
 
 通过这个小工具，可以实现通过空格缩进来展示Clojure程序结构，这和Python程序类似。这样就可以大量减少括号的输入。
 
-例如，文件=abc.cljw=内容为：
+例如，文件 `abc.cljw` 内容为：
 
 ```clojure
 defn abc [x]
     println x
 ```
 
-调用=clj-wisp.scm=命令：
+通过运行guile，调用 `clj-wisp.scm` 命令：
 
 ```sh
 guile clj-wisp.scm abc.cljw > abc.clj
 ```
 
-可转换为=abc.clj=：
+可转换为 `abc.clj` ：
 
 ```clojure
 (defn abc [x]
     (println x))
 ```
-
-# 文件名称<a id="sec-1"></a>
-
-文件扩展名默认规定为：
-
--   =cljw=表示转换为Clojure前的wisp文件，例如： abc.cljw
--   =cljsw=表示转换为ClojureScript前的wisp文件，例如： abc.cljsw
--   =cljcw=表示转换为Clojure前的wisp文件，例如： abc.cljcw
 
 # 安装和使用方法<a id="sec-2"></a>
 
@@ -68,7 +63,15 @@ guile clj-wisp.scm examples/abc.cljw > abc.clj
 ./cwisp.sh examples/abc.cljw abc.clj
 ```
 
-# 基本语法<a id="sec-3"></a>
+# 文件名称<a id="sec-3"></a>
+
+文件扩展名默认规定为：
+
+-   =cljw=表示转换为Clojure前的wisp文件，例如： abc.cljw
+-   =cljsw=表示转换为ClojureScript前的wisp文件，例如： abc.cljsw
+-   =cljcw=表示转换为Clojure前的wisp文件，例如： abc.cljcw
+
+# 基本语法<a id="sec-4"></a>
 
 这个工具大部分语法和wisp是一样的，可参考wisp文档。
 
@@ -100,10 +103,10 @@ guile clj-wisp.scm examples/abc.cljw > abc.clj
 
 更多例子可参考 `examples/more.cljw` 。
 
-# Emacs 用户<a id="sec-4"></a>
+# Emacs 用户<a id="sec-5"></a>
 
 可安装 wisp-mode 辅助编辑。建议使用Emacs，其中可以很方便的添加各种命令，方便编辑。
 
-# 更多技巧<a id="sec-5"></a>
+# 更多技巧<a id="sec-6"></a>
 
 待续
