@@ -65,9 +65,9 @@ guile clj-wisp.scm examples/abc.cljw > abc.clj
 
 文件扩展名默认规定为：
 
--   =cljw=表示转换为Clojure前的wisp文件，例如： abc.cljw
--   =cljsw=表示转换为ClojureScript前的wisp文件，例如： abc.cljsw
--   =cljcw=表示转换为Clojure前的wisp文件，例如： abc.cljcw
+-   `cljw` 表示转换为Clojure前的wisp文件，例如： abc.cljw
+-   `cljsw` 表示转换为ClojureScript前的wisp文件，例如： abc.cljsw
+-   `cljcw` 表示转换为Clojure前的wisp文件，例如： abc.cljcw
 
 # 基本语法<a id="sec-4"></a>
 
