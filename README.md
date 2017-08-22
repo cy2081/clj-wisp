@@ -3,12 +3,13 @@
 - [文件名称](#sec-3)
 - [基本语法](#sec-4)
 - [Emacs 编辑器支持](#sec-5)
+- [联系作者](#sec-6)
 
 # 简介<a id="sec-1"></a>
 
 clj-wisp 是一个用来辅助编写Clojure或ClojureScript程序的工具，可以减少括号的输入次数。
 
-当前版本： 0.9 ，作者：CY，有问题发邮件至：1829233719@qq.com
+当前版本： 0.9
 
 这个程序改编自 [Guile](https://www.gnu.org/software/guile) 中的 Wisp，原网址为： <http://www.draketo.de/english/wisp> ，针对Clojure语言进行了加强和改进。
 
@@ -114,3 +115,7 @@ guile clj-wisp.scm examples/abc.cw > abc.clj
 
 1.  打开Emacs的缩进提示功能可以方便编辑。
 2.  Org-mode 中的 tangle 功能，可以帮助转换，可参考例子文件：examples/tangle.org。
+
+# 联系作者<a id="sec-6"></a>
+
+，作者：CY，有问题发邮件至：1829233719@qq.com ，欢迎咨询。
