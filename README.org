@@ -2,7 +2,7 @@
 
 clj-wisp 是一个用来辅助编写Clojure或ClojureScript程序的工具，可以减少括号的输入次数。
 
-当前版本： 0.9
+当前版本： 0.9 ，作者：CY，有问题发邮件至：1829233719@qq.com
 
 这个程序改编自 [[https://www.gnu.org/software/guile][Guile]] 中的 Wisp，原网址为： <http://www.draketo.de/english/wisp> ，针对Clojure语言进行了加强和改进。
 
