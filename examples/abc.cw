@@ -13,3 +13,8 @@ defn abc [x]
   println x
 
 abc 12345
+
+#. java method
+
+#.. java method2
+

@@ -14,4 +14,9 @@
 
 (abc 12345)
 
+(. java method)
+
+(.. java method2)
+
+
 

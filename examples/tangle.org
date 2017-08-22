@@ -1,0 +1,10 @@
+* org-mode tangle example
+
+first put the file clj-wisp.sh in your path.
+
+#+BEGIN_SRC clj-wisp :tangle ~/a.cw
+
+def hello "hello world"
+println hello
+
+#+END_SRC

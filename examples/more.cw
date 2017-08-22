@@ -71,6 +71,10 @@ defn show-dict []
   println
     #:x dict
 
+defn java []
+  #. java method
+  #.. java method2
+
 defapi service-routes
   {:swagger {:ui "/swagger-ui"
              :spec "/swagger.json"

@@ -629,6 +629,22 @@ The line *must* have a whitespace after the prefix, except if the prefix is the 
                             (string-drop (line-content line) 3))
                            (line-comment line)))
 
+                         ((string-prefix? "#. " (line-content line))
+                          (list 
+                           (line-indent line)
+                           (string-append 
+                            "(. "
+                            (string-drop (line-content line) 3))
+                           (line-comment line)))
+
+                         ((string-prefix? "#.. " (line-content line))
+                          (list 
+                           (line-indent line)
+                           (string-append 
+                            "(.. "
+                            (string-drop (line-content line) 4))
+                           (line-comment line)))
+
                          ((string-prefix? ":" (line-content line))
                           (list 
                            (line-indent line)
