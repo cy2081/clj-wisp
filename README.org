@@ -107,5 +107,16 @@ guile clj-wisp.scm examples/abc.cw > abc.clj
    1. 打开Emacs的缩进提示功能可以方便编辑。
    2. Org-mode 中的 tangle 功能，可以帮助转换，可参考例子文件：examples/tangle.org。
 
+* 参考链接
+
+http://www.draketo.de/english/wisp
+
+http://dustycloud.org/blog/wisp-lisp-alternative/
+
+https://srfi.schemers.org/srfi-119/srfi-119.html
+
+http://www.draketo.de/light/english/wisp-lisp-indentation-preprocessor#sec-3
+
 * 联系作者
 作者：CY，有问题发邮件至：1829233719@qq.com ，欢迎咨询。
+
