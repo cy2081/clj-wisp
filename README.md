@@ -118,4 +118,4 @@ guile clj-wisp.scm examples/abc.cw > abc.clj
 
 # 联系作者<a id="sec-6"></a>
 
-，作者：CY，有问题发邮件至：1829233719@qq.com ，欢迎咨询。
+作者：CY，有问题发邮件至：1829233719@qq.com ，欢迎咨询。

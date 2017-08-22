@@ -108,4 +108,4 @@ guile clj-wisp.scm examples/abc.cw > abc.clj
    2. Org-mode 中的 tangle 功能，可以帮助转换，可参考例子文件：examples/tangle.org。
 
 * 联系作者
-，作者：CY，有问题发邮件至：1829233719@qq.com ，欢迎咨询。
+作者：CY，有问题发邮件至：1829233719@qq.com ，欢迎咨询。
