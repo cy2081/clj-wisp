@@ -8,7 +8,8 @@ clj-wisp 是一个用来辅助编写Clojure或ClojureScript程序的工具，可
 
 通过这个小工具，可以实现通过空格缩进来展示Clojure程序结构。这样就可以大量减少括号的输入。
 
-屏幕截图可参考： http://dustycloud.org/blog/wisp-lisp-alternative/
+屏幕截图可参考： examples/spacemacs-screen.png 
+http://dustycloud.org/blog/wisp-lisp-alternative/
 
 例如，文件 =abc.cw= 内容为：
 
