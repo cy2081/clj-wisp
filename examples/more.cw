@@ -44,7 +44,7 @@ defn abc2
     println x y
 
 ;; 基本演示
-def abc3 []
+defn abc3 []
   println 1 2 3
     . 4 5 6             ; 用 . 符号表示连续的参数，4 5 6 是 println 的参数 
 
