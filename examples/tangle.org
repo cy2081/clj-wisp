@@ -2,9 +2,29 @@
 
 first put the file clj-wisp.sh in your path.
 
-#+BEGIN_SRC clj-wisp :tangle ~/a.cw
+#+BEGIN_SRC clj-wisp :tangle ~/abc.cw
 
-def hello "hello world"
-println hello
+  ;; clj-wisp 演示
+  ns abc.routes.services
+    #:require
+      [ring.util.http-response :refer :all]
+      [compojure.api.sweet :refer :all]
+      [schema.core :as s]
+
+  def hello "hello world"
+
+  ;; 定义函数，同时演示行内 : 的使用 
+  defn abc
+    "这里是函数说明"
+    [x y]   ;参数注释
+    if : < x 5
+      println x
+      println
+        + y 10
+    if
+      > x 5
+      println y
+      println
+        + y 10
 
 #+END_SRC

@@ -41,7 +41,7 @@
 ; note: for easy testing: emacs -Q clj-wisp-mode.el -e eval-buffer clj-wisp-guile.w -e delete-other-windows
 
 
-(defvar clj-wisp-builtin '("def" "defn" "define" "define-syntax" "syntax-rules" "syntax-case" "define-syntax-rule" "defun" "let*" "let" "setq" "set!" "set" "if" "when" "while" "set!" "and" "or" "not" "char=?"))
+(defvar clj-wisp-builtin '("def" "defn" ":" "&" "<<" "define" "define-syntax" "syntax-rules" "syntax-case" "define-syntax-rule" "defun" "let*" "let" "setq" "set!" "set" "if" "when" "while" "set!" "and" "or" "not" "char=?" "ns" "defn-" "defmulti" "defmacro" "defprotocol" "use" "import" "require"))
 
 ; TODO: Add special treatment for defun foo : bar baz ⇒ foo = function, bar and baz not.
 ; TODO: Add highlighting for `, , and other macro-identifiers.

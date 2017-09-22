@@ -299,11 +299,15 @@ Ends with three consecutive linebreaks or eof."
 (define (dot-continues? line)
   (string-prefix? ". " (line-content line))
   )
+
+(define (and-continues? line)
+  (string-prefix? "& " (line-content line))
+  )
 (define (line-continues? line)
     "Check whether the line is a continuation of a previous line (should not start with a bracket)."
     (if (equal? #f (line-content line))
         #f ; this is the EOF line. It does not continue (to ensure that the last brackets get closed)
-        (or (key-continues? line) (dot-continues? line) (sk-continues? line) (q-continues? line) (c-continues? line) (a-continues? line) (r-continues? line) (j-continues? line)    )))
+        (or (key-continues? line) (dot-continues? line) (and-continues? line) (sk-continues? line) (q-continues? line) (c-continues? line) (a-continues? line) (r-continues? line) (j-continues? line)    )))
 
 (define (line-empty-code? line)
     "Check whether the code-part of the line is empty: contains only whitespace and/or comment."
@@ -521,13 +525,20 @@ Also unescape \\: to :.
                                 (string-append lastletter processed)))
                             ; else check for " : ": That adds a new inline bracket
                             ; support : at the beginning of a line, too.
-                          ((or (equal? " : "  lastupto3) (equal? ": " lastupto3))
+                          ((or (equal? " : "  lastupto3) (equal? ": " lastupto3) (equal? " << "  lastupto3))
                                 ; replace the last 2 chars with "(" and note
                                 ; that we need an additional closing bracket
                                 ; at the end.
                                 (linebracketizer instring inbrackets (+ 1 bracketstoadd )
                                     (string-append (string-drop-right unprocessed 2) )
                                     (string-append "(" processed)))
+                          ((equal? " << "  lastupto4)
+                                        ; replace the last 3 chars with "(" and note
+                                        ; that we need an additional closing bracket
+                                        ; at the end.
+                           (linebracketizer instring inbrackets (+ 1 bracketstoadd )
+                                            (string-append (string-drop-right unprocessed 3) )
+                                            (string-append "(" processed)))
                                 ; turn " ' (" into " '(", do not modify unprocessed, except to shorten it!
                                 ; same for ` , #' #` #, #,@,
                           ((and (string-prefix? "(" processed) (equal? " ' " lastupto3))
@@ -708,7 +719,7 @@ The line *must* have a whitespace after the prefix, except if the prefix is the 
            (list
                (line-indent line)
                (if (line-continues? line)
-                   (if (dot-continues? line)
+                   (if (or (dot-continues? line) (and-continues? line))
                        (string-drop content 2)
                        content)
                    content)
