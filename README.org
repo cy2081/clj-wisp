@@ -114,6 +114,8 @@ guile clj-wisp.scm examples/abc.cw > abc.clj
 
 然后可按照通常的方式调用clj-wisp-mode，请参考 emacs/config-example.el 文件。
 
+截屏： examples/spacemacs-screen.png
+
 小技巧：
    1. 打开Emacs的缩进提示功能可以方便编辑。
    2. Org-mode 中的 tangle 功能，可以帮助转换，可参考例子文件：examples/tangle.org。
@@ -134,5 +136,5 @@ http://www.draketo.de/light/english/wisp-lisp-indentation-preprocessor#sec-3
 * 版本主要更新
 
 ** 0.91
-   - 连续参数，除了原有的 ~.~ 支持，新增加了 ~&~
-   - 行内增加了 ~<<~ 的支持，用来表示行内新的 ~(~ 开始 
+   - 连续参数，除了原有的 ~.~ 符号支持，新增加了 ~&~ 符号
+   - 行内增加了 ~<<~ 符号的支持，用来表示行内新的 ~(~ 开始 
