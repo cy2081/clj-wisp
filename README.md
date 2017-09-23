@@ -10,7 +10,7 @@
 
 # 简介<a id="sec-1"></a>
 
-clj-wisp 是一个用来辅助编写Clojure或ClojureScript程序的工具，可以减少括号的输入次数。
+clj-wisp 是一个用来辅助编写Clojure或ClojureScript程序的工具，不仅可以减少括号的输入次数，还可以提高代码质量。
 
 当前版本： 0.91
 
